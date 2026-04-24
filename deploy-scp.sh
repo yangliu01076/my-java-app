@@ -2,6 +2,7 @@
 # 最简单的部署脚本 - 只使用 scp
 # 用法: ./deploy-scp.sh
 # 然后提示输入密码，输入密码即可
+# nohup java -jar /var/java/my-java-app/my-java-app-1.0-SNAPSHOT.jar > /var/log/my-java-app/app.log 2>&1 &
 
 # 服务器配置
 SERVER="101.132.78.93"
