@@ -22,6 +22,7 @@ public class App {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
+//                        .allowedOriginPatterns("*")
                         .allowedOrigins("http://localhost:8080") // Vue 开发服务器地址
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")

@@ -18,7 +18,6 @@ import java.util.*;
 @RestController
 @RequestMapping("/api/mood")
 @Validated
-@CrossOrigin(origins = "*") // 允许跨域
 public class MoodRecordController {
 
     @Resource
