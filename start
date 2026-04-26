@@ -1,0 +1,17 @@
+nohup java \
+-Xms128m -Xmx256m \
+-Xmn96m \
+-XX:MetaspaceSize=64m \
+-XX:MaxMetaspaceSize=128m \
+-XX:+UseSerialGC \
+-XX:+UseCompressedOops \
+-XX:+UseCompressedClassPointers \
+-XX:SurvivorRatio=8 \
+-XX:+PrintGC \
+-XX:+PrintGCDateStamps \
+-Xloggc:/var/log/my-java-app/gc.log \
+-XX:+HeapDumpOnOutOfMemoryError \
+-XX:HeapDumpPath=/var/log/my-java-app/ \
+-Djava.awt.headless=true \
+-Dfile.encoding=UTF-8 \
+-jar /var/java/my-java-app/my-java-app-1.0-SNAPSHOT.jar > /var/log/my-java-app/app.log 2>&1 &
